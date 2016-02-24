@@ -1,1 +1,1 @@
-# iws-form-component
+# iws-widgets
