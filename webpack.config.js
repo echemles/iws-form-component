@@ -50,8 +50,8 @@ module.exports = (() => {
       }
     }],
     output: {
-      filename: 'form.js',
-      library: 'IWSForm',
+      filename: 'iws-form-component.js',
+      library: 'IWSFormComponent',
       libraryTarget: 'umd',
       path: './dist/',
     },
@@ -65,7 +65,7 @@ module.exports = (() => {
       ]
     },
     plugins: [
-      new extractTextPlugin('form.css'),
+      new extractTextPlugin('iws-form-component.css'),
       new webpack.optimize.OccurenceOrderPlugin()
     ]
   };

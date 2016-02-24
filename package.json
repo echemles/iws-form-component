@@ -1,8 +1,8 @@
 {
-  "name": "iws-widgets",
+  "name": "iws-form-component",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/form.js",
+  "main": "dist/iws-form-component.js",
   "scripts": {
     "build": "rimraf dist/ && webpack -d --no-info --progress --config webpack.config.js"
   },
