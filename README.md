@@ -40,8 +40,16 @@
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
+| dateFormat | string | 'MM/DD/YYYY' |      |
+| errorMessage | bool \| string | true |    |
 | id | string* | undefined |                |
+| label | bool \| string | true |           |
+| maxDate | string | undefined |            |
+| minDate | string | undefined |            |
+| onChange | func | ({ value }) => {} |     |
+| validate | bool \| func | false |         |
 | value | string | '' |                     |
+| weekStart | string | '0' |                |
 
 
 ### 3. \<Email /\>
@@ -79,13 +87,20 @@
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
 | id | string* | undefined |                |
+| label | bool \| string | true |           |
+| onChange | func | ({ value }) => {} |     |
+| options | arrayOf(shape(label: string, value: string) \| string) | undefined | |
 | value | string | '' |                     |
 
 ### 7. \<Select /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
+| errorMessage | bool \| string | true |    |
 | id | string* | undefined |                |
+| label | bool \| string | true |           |
+| onChange | func | ({ value }) => {} |     |
+| options | arrayOf(shape(label: string, value: string) \| string) | undefined | |
 | value | string | '' |                     |
 
 ### 8. \<Text /\>
