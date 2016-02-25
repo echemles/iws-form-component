@@ -74,7 +74,7 @@ export default Page(Home);
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | action | string* | undefined | This corresponds to the url you will be posting your data to. |
-| className | string | '' | Custom className you may want to add to the form component for styling purposes. |
+| className | string | '' | Custom className you may want to add for styling purposes. |
 | errorMessages | bool | true | By default when validation occurs, error messages will pop up. You can choose to shut these off globally using this property. |
 | eventAction | string | 'Completion' | The event action you want to send for form event tracking. |
 | eventCategory | string | 'Form' | The event category you want to send for form event tracking. |
@@ -86,22 +86,22 @@ export default Page(Home);
 | onSuccess | func | () => {} | Callback for when the form successfully posts on submit. |
 | placeholders | bool | false | Toggles between labels and placeholders. Labels are turned on by default. |
 | submitText | string | 'Submit' | Text to be displayed on the submit button. |
-| successMessage | string | 'Thank You for Your Submission!' | Text to be displayed within the success message. You can also pass in html: '\<div\>Thanks!\</div\>'  |
-| successModal | bool | false |             |
+| successMessage | string | 'Thank You for Your Submission!' | Text to be displayed within the success message. You can also pass in html: '\<div\>Thanks!\</div\>'. |
+| successModal | bool | false | Option to display success message inside of a modal. |
 
 #### 2. \<Fieldset /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' |                 |
-| title | string | '' |                     |
+| className | string | '' | Custom className you may want to add for styling purposes. |
+| title | string | '' | Optional title to be displayed. You can also pass in html: '\<h2\>Title\</h2\>'. |
 
 ## Fields
 
 #### 1. \<Checkbox /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' |                 |
-| id | string* | undefined |                |
+| className | string | '' | Custom className you may want to add for styling purposes. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
 | label | bool \| string | true |           |
 | onChange | func | ({ value }) => {} |     |
 | value | bool | false |                    |
@@ -109,10 +109,10 @@ export default Page(Home);
 #### 2. \<Datepicker /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' |                 |
+| className | string | '' | Custom className you may want to add for styling purposes. |
 | dateFormat | string | 'MM/DD/YYYY' |      |
 | errorMessage | bool \| string | true |    |
-| id | string* | undefined |                |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
 | label | bool \| string | true |           |
 | maxDate | string | undefined |            |
 | minDate | string | undefined |            |
@@ -125,9 +125,9 @@ export default Page(Home);
 #### 3. \<Email /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' |                 |
+| className | string | '' | Custom className you may want to add for styling purposes. |
 | errorMessage | bool \| string | true |    |
-| id | string* | undefined |                |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
 | label | bool \| string | true |           |
 | onChange | func | ({ value }) => {} |     |
 | validate | bool \| func | false |         |
@@ -137,8 +137,8 @@ export default Page(Home);
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | accepts | arrayOf(string) | ['doc', 'docx', 'gif', 'jpg', 'jpeg', 'pdf', 'png'] | |
-| className | string | '' |                 |
-| id | string* | undefined |                |
+| className | string | '' | Custom className you may want to add for styling purposes. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
 | label | bool \| string | true |           |
 | maxSize | number | 2 |                    |
 | onChange | func | ({ value }) => {} |     |
@@ -148,15 +148,15 @@ export default Page(Home);
 #### 5. \<Hidden /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' |                 |
-| id | string* | undefined |                |
+| className | string | '' | Custom className you may want to add for styling purposes. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
 | value | string | '' |                     |
 
 #### 6. \<Radio /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' |                 |
-| id | string* | undefined |                |
+| className | string | '' | Custom className you may want to add for styling purposes. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
 | label | bool \| string | true |           |
 | onChange | func | ({ value }) => {} |     |
 | options | arrayOf(shape(label: string, value: string) \| string) | undefined | |
@@ -165,9 +165,9 @@ export default Page(Home);
 #### 7. \<Select /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' |                 |
+| className | string | '' | Custom className you may want to add for styling purposes. |
 | errorMessage | bool \| string | true |    |
-| id | string* | undefined |                |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
 | label | bool \| string | true |           |
 | onChange | func | ({ value }) => {} |     |
 | options | arrayOf(shape(label: string, value: string) \| string) | undefined | |
@@ -176,9 +176,9 @@ export default Page(Home);
 #### 8. \<Text /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' |                 |
+| className | string | '' | Custom className you may want to add for styling purposes. |
 | errorMessage | bool \| string | true |    |
-| id | string* | undefined |                |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
 | label | bool \| string | true |           |
 | onChange | func | ({ value }) => {} |     |
 | validate | bool \| func | false |         |
@@ -187,9 +187,9 @@ export default Page(Home);
 #### 9. \<Textarea /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' |                 |
+| className | string | '' | Custom className you may want to add for styling purposes. |
 | errorMessage | bool \| string | true |    |
-| id | string* | undefined |                |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
 | label | bool \| string | true |           |
 | onChange | func | ({ value }) => {} |     |
 | validate | bool \| func | false |         |
