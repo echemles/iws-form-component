@@ -46,9 +46,9 @@
 | label | bool \| string | true |           |
 | onChange | func | ({ value }) => {} |     |
 | validate | bool \| func | false |         |
-| value | bool | false |                    |
+| value | bool \| number \| string | '' |   |
 
-### 2. \<File /\>
+### 3. \<File /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | accepts | arrayOf(string) | ['doc', 'docx', 'gif', 'jpg', 'jpeg', 'pdf', 'png'] | |
@@ -59,3 +59,10 @@
 | onChange | func | ({ value }) => {} |     |
 | validate | bool | false |                 |
 | value | object | {} |                     |
+
+### 4. \<Hidden /\>
+| Name | Type | Default Value | Description |
+| ---- | ---- | ------------- | ----------- |
+| className | string | '' |                 |
+| id | string* | undefined |                |
+| value | bool \| number \| string | '' |   |
