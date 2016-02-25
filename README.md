@@ -26,6 +26,7 @@
 | title | string | '' |                     |
 
 # Fields
+
 ### 1. \<Checkbox /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
@@ -34,3 +35,27 @@
 | label | bool \| string | true |           |
 | onChange | func | ({ value }) => {} |     |
 | value | bool | false |                    |
+
+
+### 2. \<Email /\>
+| Name | Type | Default Value | Description |
+| ---- | ---- | ------------- | ----------- |
+| className | string | '' |                 |
+| errorMessage | bool \| string | true |    |
+| id | string* | undefined |                |
+| label | bool \| string | true |           |
+| onChange | func | ({ value }) => {} |     |
+| validate | bool \| func | false |         |
+| value | bool | false |                    |
+
+### 2. \<File /\>
+| Name | Type | Default Value | Description |
+| ---- | ---- | ------------- | ----------- |
+| accepts | arrayOf(string) | ['doc', 'docx', 'gif', 'jpg', 'jpeg', 'pdf', 'png'] | |
+| className | string | '' |                 |
+| id | string* | undefined |                |
+| label | bool \| string | true |           |
+| maxSize | number | 2 |                    |
+| onChange | func | ({ value }) => {} |     |
+| validate | bool | false |                 |
+| value | object | {} |                     |
