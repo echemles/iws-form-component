@@ -10,7 +10,7 @@ import titleize from './../utilities/titleize.js';
 class File extends React.Component {
 
   static propTypes = {
-    accepts: React.PropTypes.array,
+    accepts: React.PropTypes.arrayOf(React.PropTypes.string),
     className: React.PropTypes.string,
     id: React.PropTypes.string.isRequired,
     label: React.PropTypes.oneOfType([
@@ -20,7 +20,6 @@ class File extends React.Component {
     maxSize: React.PropTypes.number,
     onChange: React.PropTypes.func,
     placeholders: React.PropTypes.bool,
-    type: React.PropTypes.string,
     validate: React.PropTypes.bool,
     value: React.PropTypes.object
   };
@@ -31,7 +30,6 @@ class File extends React.Component {
     label: true,
     maxSize: 2,
     onChange: () => {},
-    type: 'file',
     validate: false,
     value: {}
   }

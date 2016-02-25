@@ -1,9 +1,9 @@
 const Fieldset = ({ children, className, title }) => (
   <div className={ `form__fieldset ${ className }` }>
     { title && (
-      <div className="form__fieldset-title">
-        <h2 dangerouslySetInnerHTML={{ __html: title }} />
-      </div>
+      <div
+        className="form__fieldset-title"
+        dangerouslySetInnerHTML={{ __html: title }} />
     ) }
     { children }
   </div>
@@ -17,7 +17,8 @@ Fieldset.propTypes = {
 
 Fieldset.defaultProps = {
   className: '',
-  componentType: 'fieldset'
+  componentType: 'fieldset',
+  title: ''
 };
 
 export default Fieldset;

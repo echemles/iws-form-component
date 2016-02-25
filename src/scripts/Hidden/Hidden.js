@@ -13,11 +13,7 @@ class Hidden extends React.Component {
   static propTypes = {
     className: React.PropTypes.string,
     id: React.PropTypes.string.isRequired,
-    value: React.PropTypes.oneOfType([
-      React.PropTypes.bool,
-      React.PropTypes.number,
-      React.PropTypes.string
-    ])
+    value: React.PropTypes.string
   };
 
   static defaultProps = {

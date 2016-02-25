@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/iws-form-component.js",
   "scripts": {
-    "build": "rimraf dist/ && webpack -p --no-info --progress --config webpack.config.js"
+    "build": "rimraf dist/ && webpack -d --no-info --progress --config webpack.config.js"
   },
   "repository": {
     "type": "git",

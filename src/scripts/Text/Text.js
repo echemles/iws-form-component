@@ -32,11 +32,7 @@ class Text extends React.Component {
       React.PropTypes.bool,
       React.PropTypes.func
     ]),
-    value: React.PropTypes.oneOfType([
-      React.PropTypes.bool,
-      React.PropTypes.number,
-      React.PropTypes.string
-    ])
+    value: React.PropTypes.string
   };
 
   static defaultProps = {

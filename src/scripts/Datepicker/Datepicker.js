@@ -17,7 +17,7 @@ class DatePicker extends React.Component {
 
   static propTypes = {
     className: React.PropTypes.string,
-    dateFormat: React.PropTypes.string.isRequired,
+    dateFormat: React.PropTypes.string,
     errorMessage: React.PropTypes.oneOfType([
       React.PropTypes.bool,
       React.PropTypes.string
@@ -32,6 +32,7 @@ class DatePicker extends React.Component {
     minDate: React.PropTypes.object,
     onChange: React.PropTypes.func,
     placeholders: React.PropTypes.bool,
+    validate: React.PropTypes.bool,
     value: React.PropTypes.string,
     weekStart: React.PropTypes.string
   };
@@ -139,8 +140,8 @@ class DatePicker extends React.Component {
           <div className="form__field__input-container">
             <ReactDatePicker
               dateFormat={ dateFormat }
-              maxDate={ maxDate }
-              minDate={ minDate }
+              maxDate={ moment(new Date(maxDate)) }
+              minDate={ moment(new Date(minDate)) }
               selected={ value ? moment(new Date(value)) : null }
               onChange={ this.handleOnChange.bind(null, this) }
               placeholderText={ this.formatPlaceholder() }

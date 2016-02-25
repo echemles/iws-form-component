@@ -30,24 +30,13 @@ class Select extends React.Component {
     options: React.PropTypes.arrayOf(React.PropTypes.oneOfType([
       React.PropTypes.shape({
         label: React.PropTypes.string,
-        value: React.PropTypes.oneOfType([
-          React.PropTypes.bool,
-          React.PropTypes.number,
-          React.PropTypes.string
-        ])
+        value: React.PropTypes.string
       }),
-      React.PropTypes.oneOfType([
-        React.PropTypes.bool,
-        React.PropTypes.number,
-        React.PropTypes.string
-      ])
+      React.PropTypes.string
     ])),
     placeholders: React.PropTypes.bool,
-    value: React.PropTypes.oneOfType([
-      React.PropTypes.bool,
-      React.PropTypes.number,
-      React.PropTypes.string
-    ])
+    validate: React.PropTypes.bool,
+    value: React.PropTypes.string
   };
 
   static defaultProps = {

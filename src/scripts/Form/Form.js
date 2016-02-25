@@ -143,7 +143,7 @@ class Form extends React.Component {
   }
 
   trackForm() {
-    if (window.ga && this.props.eventTracking && ENV !== 'local') {
+    if (window.ga && this.props.eventTracking) {
       const {
         eventAction,
         eventCategory,
