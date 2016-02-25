@@ -66,3 +66,39 @@
 | className | string | '' |                 |
 | id | string* | undefined |                |
 | value | string | '' |                     |
+
+### 5. \<Radio /\>
+| Name | Type | Default Value | Description |
+| ---- | ---- | ------------- | ----------- |
+| className | string | '' |                 |
+| id | string* | undefined |                |
+| value | string | '' |                     |
+
+### 6. \<Select /\>
+| Name | Type | Default Value | Description |
+| ---- | ---- | ------------- | ----------- |
+| className | string | '' |                 |
+| id | string* | undefined |                |
+| value | string | '' |                     |
+
+### 7. \<Text /\>
+| Name | Type | Default Value | Description |
+| ---- | ---- | ------------- | ----------- |
+| className | string | '' |                 |
+| errorMessage | bool \| string | true |    |
+| id | string* | undefined |                |
+| label | bool \| string | true |           |
+| onChange | func | ({ value }) => {} |     |
+| validate | bool \| func | false |         |
+| value | string | '' |                     |
+
+### 8. \<Textarea /\>
+| Name | Type | Default Value | Description |
+| ---- | ---- | ------------- | ----------- |
+| className | string | '' |                 |
+| errorMessage | bool \| string | true |    |
+| id | string* | undefined |                |
+| label | bool \| string | true |           |
+| onChange | func | ({ value }) => {} |     |
+| validate | bool \| func | false |         |
+| value | string | '' |                     |
