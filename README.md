@@ -110,16 +110,16 @@ export default Page(Home);
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' | Custom className you may want to add for styling purposes. |
-| dateFormat | string | 'MM/DD/YYYY' |      |
+| dateFormat | string | 'MM/DD/YYYY' | Format the date should be displayed in. |
 | errorMessage | bool \| string | true | By default an error message is displayed when validation is failed. You can either set this to false to turn off the error message individually or you can pass in a custom error message, which also takes html: 'Error\<br\>Message.'; otherwise, the default error message will be displayed. |
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
-| maxDate | string | undefined |            |
-| minDate | string | undefined |            |
+| maxDate | string | undefined | Maximum date the calendar should display. |
+| minDate | string | undefined | Minimum date the calendar should display. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| validate | bool \| func | false |         |
+| validate | bool | false | If this is set to true, then validation will fail if a date is not picked. |
 | value | string | '' | Initial value to be passed. |
-| weekStart | string | '0' |                |
+| weekStart | string | '0' | Day of the week the calendar should start on. Default is Sunday. |
 
 
 #### 3. \<Email /\>
@@ -130,19 +130,19 @@ export default Page(Home);
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| validate | bool \| func | false |         |
+| validate | bool \| func(value) | false | If this is set to true, then validation will fail if a valid email is not provided. You can also pass in a function callback that takes a the current value of the field. This callback must return a boolean value. |
 | value | string | '' | Initial value to be passed. |
 
 #### 4. \<File /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| accepts | arrayOf(string) | ['doc', 'docx', 'gif', 'jpg', 'jpeg', 'pdf', 'png'] | |
+| accepts | arrayOf(string) | ['doc', 'docx', 'gif', 'jpg', 'jpeg', 'pdf', 'png'] | Accepted file types that may be uploaded. |
 | className | string | '' | Custom className you may want to add for styling purposes. |
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
-| maxSize | number | 2 |                    |
+| maxSize | number | 2 | The maximum file size in Megabytes. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| validate | bool | false |                 |
+| validate | bool | false | If this is set to true, then validation will fail if a file is not uploaded. Also, regardless of whether or not this is set, if a file is uploaded, then it will check to see if a valid file type was passed and the file size does not excees the maxSize prop. |
 | value | object | {} | Initial value to be passed. |
 
 #### 5. \<Hidden /\>
@@ -159,7 +159,7 @@ export default Page(Home);
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| options | arrayOf(shape(label: string, value: string) \| string) | undefined | |
+| options | arrayOf(shape(label: string, value: string) \| string) | undefined | Options to be passed to \<Radio /\>. You can also pass children instead in the form of '\<option value="option"\>Option\</option\>' or simply '\<option\>Option\</option\>' |
 | value | string | '' | Initial value to be passed. |
 
 #### 7. \<Select /\>
@@ -170,7 +170,8 @@ export default Page(Home);
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| options | arrayOf(shape(label: string, value: string) \| string) | undefined | |
+| options | arrayOf(shape(label: string, value: string) \| string) | undefined | Options to be passed to \<Select /\>. You can also pass children instead in the form of '\<option value="option"\>Option\</option\>' or simply '\<option\>Option\</option\>' |
+| validate | bool | false | If this is set to true, then validation will fail if something is not selected. |
 | value | string | '' | Initial value to be passed. |
 
 #### 8. \<Text /\>
@@ -181,7 +182,7 @@ export default Page(Home);
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| validate | bool \| func | false |         |
+| validate | bool \| func(value) | false | If this is set to true, then validation will fail if a nothing is provided. You can also pass in a function callback that takes a the current value of the field. This callback must return a boolean value.|
 | value | string | '' | Initial value to be passed. |
 
 #### 9. \<Textarea /\>
@@ -192,5 +193,5 @@ export default Page(Home);
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| validate | bool \| func | false |         |
+| validate | bool \| func(value) | false | If this is set to true, then validation will fail if a nothing is provided. You can also pass in a function callback that takes a the current value of the field. This callback must return a boolean value.|
 | value | string | '' | Initial value to be passed. |
