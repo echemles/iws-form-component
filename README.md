@@ -19,7 +19,7 @@
 | successMessage | string | 'Thank You for Your Submission!' | |
 | successModal | bool | false |             |
 
-### 2. Fieldset
+### 2. \<Fieldset /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
