@@ -50,7 +50,7 @@ export default Page(Home);
 ```
 
 
-## PropTypes
+## Components
 #### Containers
 
 1. [\<Form /\>](https://github.com/ideawork/iws-form-component/#1-form-)
@@ -101,24 +101,24 @@ export default Page(Home);
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' | Custom className you may want to add for styling purposes. |
-| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
-| label | bool \| string | true |           |
-| onChange | func | ({ value }) => {} |     |
-| value | bool | false |                    |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
+| label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
+| onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
+| value | bool | false | Initial value to be passed. |
 
 #### 2. \<Datepicker /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' | Custom className you may want to add for styling purposes. |
 | dateFormat | string | 'MM/DD/YYYY' |      |
-| errorMessage | bool \| string | true |    |
-| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
-| label | bool \| string | true |           |
+| errorMessage | bool \| string | true | By default an error message is displayed when validation is failed. You can either set this to false to turn off the error message individually or you can pass in a custom error message, which also takes html: 'Error\<br\>Message.'; otherwise, the default error message will be displayed. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
+| label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | maxDate | string | undefined |            |
 | minDate | string | undefined |            |
-| onChange | func | ({ value }) => {} |     |
+| onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
 | validate | bool \| func | false |         |
-| value | string | '' |                     |
+| value | string | '' | Initial value to be passed. |
 | weekStart | string | '0' |                |
 
 
@@ -126,71 +126,71 @@ export default Page(Home);
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' | Custom className you may want to add for styling purposes. |
-| errorMessage | bool \| string | true |    |
-| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
-| label | bool \| string | true |           |
-| onChange | func | ({ value }) => {} |     |
+| errorMessage | bool \| string | true | By default an error message is displayed when validation is failed. You can either set this to false to turn off the error message individually or you can pass in a custom error message, which also takes html: 'Error\<br\>Message.'; otherwise, the default error message will be displayed. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
+| label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
+| onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
 | validate | bool \| func | false |         |
-| value | string | '' |                     |
+| value | string | '' | Initial value to be passed. |
 
 #### 4. \<File /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | accepts | arrayOf(string) | ['doc', 'docx', 'gif', 'jpg', 'jpeg', 'pdf', 'png'] | |
 | className | string | '' | Custom className you may want to add for styling purposes. |
-| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
-| label | bool \| string | true |           |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
+| label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | maxSize | number | 2 |                    |
-| onChange | func | ({ value }) => {} |     |
+| onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
 | validate | bool | false |                 |
-| value | object | {} |                     |
+| value | object | {} | Initial value to be passed. |
 
 #### 5. \<Hidden /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| className | string | '' | Custom className you may want to add for styling purposes. |
-| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
-| value | string | '' |                     |
+| className | string | '' | Custom className you may want to add. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. |
+| value | string | '' | Initial value to be passed. |
 
 #### 6. \<Radio /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' | Custom className you may want to add for styling purposes. |
-| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
-| label | bool \| string | true |           |
-| onChange | func | ({ value }) => {} |     |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
+| label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
+| onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
 | options | arrayOf(shape(label: string, value: string) \| string) | undefined | |
-| value | string | '' |                     |
+| value | string | '' | Initial value to be passed. |
 
 #### 7. \<Select /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' | Custom className you may want to add for styling purposes. |
-| errorMessage | bool \| string | true |    |
-| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
-| label | bool \| string | true |           |
-| onChange | func | ({ value }) => {} |     |
+| errorMessage | bool \| string | true | By default an error message is displayed when validation is failed. You can either set this to false to turn off the error message individually or you can pass in a custom error message, which also takes html: 'Error\<br\>Message.'; otherwise, the default error message will be displayed. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
+| label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
+| onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
 | options | arrayOf(shape(label: string, value: string) \| string) | undefined | |
-| value | string | '' |                     |
+| value | string | '' | Initial value to be passed. |
 
 #### 8. \<Text /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' | Custom className you may want to add for styling purposes. |
-| errorMessage | bool \| string | true |    |
-| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
-| label | bool \| string | true |           |
-| onChange | func | ({ value }) => {} |     |
+| errorMessage | bool \| string | true | By default an error message is displayed when validation is failed. You can either set this to false to turn off the error message individually or you can pass in a custom error message, which also takes html: 'Error\<br\>Message.'; otherwise, the default error message will be displayed. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
+| label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
+| onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
 | validate | bool \| func | false |         |
-| value | string | '' |                     |
+| value | string | '' | Initial value to be passed. |
 
 #### 9. \<Textarea /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' | Custom className you may want to add for styling purposes. |
-| errorMessage | bool \| string | true |    |
-| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then a label will be titleized according to this id. |
-| label | bool \| string | true |           |
-| onChange | func | ({ value }) => {} |     |
+| errorMessage | bool \| string | true | By default an error message is displayed when validation is failed. You can either set this to false to turn off the error message individually or you can pass in a custom error message, which also takes html: 'Error\<br\>Message.'; otherwise, the default error message will be displayed. |
+| id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
+| label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
+| onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
 | validate | bool \| func | false |         |
-| value | string | '' |                     |
+| value | string | '' | Initial value to be passed. |
