@@ -59,20 +59,20 @@ export default Page(Home);
 ## Components
 #### Containers
 
-1. [\<Form /\>](https://github.com/ideawork/iws-form-component/#1-form-)
-2. [\<Fieldset /\>](https://github.com/ideawork/iws-form-component/#2-fieldset-)
+1. [\<Form /\>](#1-form-)
+2. [\<Fieldset /\>](#2-fieldset-)
 
 #### Fields
 
-1. [\<Checkbox /\>](https://github.com/ideawork/iws-form-component/#1-checkbox-)
-2. [\<Datepicker /\>](https://github.com/ideawork/iws-form-component/#2-datepicker-)
-3. [\<Email /\>](https://github.com/ideawork/iws-form-component/#3-email-)
-4. [\<File /\>](https://github.com/ideawork/iws-form-component/#4-file-)
-5. [\<Hidden /\>](https://github.com/ideawork/iws-form-component/#5-hidden-)
-6. [\<Radio /\>](https://github.com/ideawork/iws-form-component/#6-radio-)
-7. [\<Select /\>](https://github.com/ideawork/iws-form-component/#7-select-)
-8. [\<Text /\>](https://github.com/ideawork/iws-form-component/#8-text-)
-9. [\<Textarea /\>](https://github.com/ideawork/iws-form-component/#9-textarea-)
+1. [\<Checkbox /\>](#1-checkbox-)
+2. [\<Datepicker /\>](#2-datepicker-)
+3. [\<Email /\>](#3-email-)
+4. [\<File /\>](#4-file-)
+5. [\<Hidden /\>](#5-hidden-)
+6. [\<Radio /\>](#6-radio-)
+7. [\<Select /\>](#7-select-)
+8. [\<Text /\>](#8-text-)
+9. [\<Textarea /\>](#9-textarea-)
 
 ## Containers
 \* Denotes a required prop.
