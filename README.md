@@ -46,7 +46,7 @@
 | label | bool \| string | true |           |
 | onChange | func | ({ value }) => {} |     |
 | validate | bool \| func | false |         |
-| value | bool \| number \| string | '' |   |
+| value | string | '' |                     |
 
 ### 3. \<File /\>
 | Name | Type | Default Value | Description |
@@ -65,4 +65,4 @@
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
 | id | string* | undefined |                |
-| value | bool \| number \| string | '' |   |
+| value | string | '' |                     |
