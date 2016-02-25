@@ -52,7 +52,7 @@ export default Page(Home);
 ## Things to Know
 1. All fields need to be nested within the `<Form />` component. They can also be nested under the `<Fieldset />` component, which also must be nested under the `<Form />` component.
 2. Only required prop for `<Form />` is action, which determines your post url.
-3. Only required prop for any `<Field />` component is id. This corresponds to the name of the field being sent to the server. Also, if a custom label prop is not passed, then a titleized version of the is used.
+3. Only required prop for any `<Field />` component is id. This corresponds to the name of the field being sent to the server. Also, if a custom label prop is not passed, then a titleized version of the id used.
 4. `<Radio />` and `<Select />` fields can be passed either children or an options prop. See below for more information.
 5. You can only pass custom validation into `<Email />`, `<Text />`, and `<Textarea />`. Simply, anything that is a text field.
 
