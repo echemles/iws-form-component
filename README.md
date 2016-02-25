@@ -36,8 +36,15 @@
 | onChange | func | ({ value }) => {} |     |
 | value | bool | false |                    |
 
+### 2. \<Datepicker /\>
+| Name | Type | Default Value | Description |
+| ---- | ---- | ------------- | ----------- |
+| className | string | '' |                 |
+| id | string* | undefined |                |
+| value | string | '' |                     |
 
-### 2. \<Email /\>
+
+### 3. \<Email /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
@@ -48,7 +55,7 @@
 | validate | bool \| func | false |         |
 | value | string | '' |                     |
 
-### 3. \<File /\>
+### 4. \<File /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | accepts | arrayOf(string) | ['doc', 'docx', 'gif', 'jpg', 'jpeg', 'pdf', 'png'] | |
@@ -60,28 +67,28 @@
 | validate | bool | false |                 |
 | value | object | {} |                     |
 
-### 4. \<Hidden /\>
+### 5. \<Hidden /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
 | id | string* | undefined |                |
 | value | string | '' |                     |
 
-### 5. \<Radio /\>
+### 6. \<Radio /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
 | id | string* | undefined |                |
 | value | string | '' |                     |
 
-### 6. \<Select /\>
+### 7. \<Select /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
 | id | string* | undefined |                |
 | value | string | '' |                     |
 
-### 7. \<Text /\>
+### 8. \<Text /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
@@ -92,7 +99,7 @@
 | validate | bool \| func | false |         |
 | value | string | '' |                     |
 
-### 8. \<Textarea /\>
+### 9. \<Textarea /\>
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
 | className | string | '' |                 |
