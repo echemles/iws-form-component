@@ -151,7 +151,7 @@ export default Page(Home);
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | maxSize | number | 2 | The maximum file size in Megabytes. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| validate | bool | false | If this is set to true, then validation will fail if a file is not uploaded. Also, regardless of whether or not this is set, if a file is uploaded, then it will check to see if a valid file type was passed and the file size does not excees the maxSize prop. |
+| validate | bool | false | If this is set to true, then validation will fail if a file is not uploaded. Also, regardless of whether or not this is set, if a file is uploaded, then it will check to see if a valid file type was passed and the file size does not exceed the maxSize prop. |
 | value | object | {} | Initial value to be passed. |
 
 #### 5. \<Hidden /\>
