@@ -139,7 +139,7 @@ export default Page(Home);
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| validate | bool \| func(value) | false | If this is set to true, then validation will fail if a valid email is not provided. You can also pass in a function callback that takes a the current value of the field. This callback must return a boolean value. |
+| validate | bool \| func(value) | false | If this is set to true, then validation will fail if a valid email is not provided. You can also pass in a callback function that takes passes the current value of the field. This callback must return a boolean value. |
 | value | string | '' | Initial value to be passed. |
 
 #### 4. \<File /\>
@@ -191,7 +191,7 @@ export default Page(Home);
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| validate | bool \| func(value) | false | If this is set to true, then validation will fail if a nothing is provided. You can also pass in a function callback that takes a the current value of the field. This callback must return a boolean value.|
+| validate | bool \| func(value) | false | If this is set to true, then validation will fail if a nothing is provided. You can also pass in a callback function that takes passes the current value of the field. This callback must return a boolean value. |
 | value | string | '' | Initial value to be passed. |
 
 #### 9. \<Textarea /\>
@@ -202,5 +202,5 @@ export default Page(Home);
 | id | string* | undefined | Property that determines the key that will be sent to the server. Also, if label is not provided, then the label will be titleized according to this id. |
 | label | bool \| string | true | Labels are created intelligently by default according to the id you provide; however, you can also pass a string to this prop to display a custom label. You can also pass in html: 'This is a \<br\> label'. |
 | onChange | func | ({ value }) => {} | Callback that is fired when the value of your input changes. An object containing the value is currently the only thing passed. |
-| validate | bool \| func(value) | false | If this is set to true, then validation will fail if a nothing is provided. You can also pass in a function callback that takes a the current value of the field. This callback must return a boolean value.|
+| validate | bool \| func(value) | false | If this is set to true, then validation will fail if a nothing is provided. You can also pass in a callback function that takes passes the current value of the field. This callback must return a boolean value. |
 | value | string | '' | Initial value to be passed. |
